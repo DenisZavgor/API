@@ -1,0 +1,13 @@
+<section id="main" >
+  <input id="toggle-all" type="checkbox" ng-model="all" ng-click="vm.markAll(all)">
+  <label for="toggle-all" >Mark all as complete</label>
+  <ul id="todo-list">
+    <li ng-repeat="item in vm.items | filter: vm.statusFilter" ng-class="{completed: item.completed}">
+      <div class="view">
+       <input class="toggle" type="checkbox" ng-model="item.completed">
+        <label>{{item.name}}<span> {{item.price | currency}}</span><span>{{vm.date | date:'shortDate'}}</span></label>
+        <button class="destroy" ng-click="vm.deleteItem(item)"></button>
+      </div>
+    </li>
+  </ul>
+</section>

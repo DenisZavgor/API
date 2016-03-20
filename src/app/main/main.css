@@ -1,0 +1,19 @@
+.todo-list{
+	width: 500px;
+	border:1px solid black;
+}
+
+h1{
+	font-family:Arial, Sans-Serif, Tahoma;
+	color:red;
+}
+
+ul{
+	margin:0;
+	padding: 0;
+}
+
+li{
+	list-style:none;
+}
+

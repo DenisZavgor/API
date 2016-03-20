@@ -1,0 +1,16 @@
+<footer id="footer" ng-show="vm.items.length">
+  <span id="todo-count"><strong>{{vm.remainingCount}} left</strong>
+  </span>
+  <ul id="filters">
+    <li>
+      <a ng-class="{selected: vm.status == ''} " ng-click = "vm.changeFilter('')">All</a>
+    </li>
+    <li>
+      <a ng-class="{selected: vm.status == 'active'}" ng-click = "vm.changeFilter('active')">Active</a>
+    </li>
+    <li>
+      <a ng-class="{selected: vm.status == 'completed'}" ng-click = "vm.changeFilter('completed')">Completed</a>
+    </li>
+  </ul>
+  <button id="clear-completed" ng-show="vm.completedCount" ng-click="vm.clearCompleted()">Clear completed</button>
+</footer>
